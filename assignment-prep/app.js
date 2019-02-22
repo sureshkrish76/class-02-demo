@@ -46,6 +46,7 @@ if (country.toUpperCase() == 'Y' || country.toUpperCase() === 'YES') {
     totalCorrect++;
 }
 
+/*
 totalQuestions++;
 // Question 3
 var company = prompt("Where do I work currently ? Amazon,Google, MicroSoft");
@@ -54,6 +55,20 @@ if (company.toLowerCase() === 'amazon') {
     console.log("Your Guess is about my company is correct:"+company);
     alert("Your guess about my company is correct");
     totalCorrect++;
+}
+*/
+
+favouritesyesno('Amazon');
+favouritesyesno('green');
+
+function favouritesyesno(yesnoinput) {
+    var userinput = prompt("Do I like " + yesnoinput + " ? - Y or N");
+    if (userinput.toUpperCase() === 'Y') {
+       // totalCorrect++
+    } else
+    {
+
+    }
 }
 
 // Question 4
@@ -65,6 +80,7 @@ if (city.toUpperCase() === 'BELLEVUE') {
     totalCorrect++;
 }
 
+/*
 // Question 5
 totalQuestions++;
 var color = prompt("Guess my favorite color");
@@ -72,6 +88,7 @@ if (color.toUpperCase() === 'GREEN') {
     console.log('Guessed color:'+color);
     alert('Your guess about the color:'+color+' is correct');
 }
+*/
 
 console.log('Thanks for playing, you have answered ' + totalCorrect + 'correctly' + ' out of  '+ totalQuestions+' questions');
 alert('Thanks for playing, you have answered ' + totalCorrect + 'correctly' + ' out of  '+ totalQuestions+' questions');
