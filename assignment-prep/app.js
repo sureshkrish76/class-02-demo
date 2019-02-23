@@ -17,11 +17,11 @@ if (parseInt(numOfKids) === 1) {
     correctAnswer = 'Y';
     totalCorrect++;
     break;
-} else if (parseInt(numOfKids) === 2 || parseInt(numOfKids) === 3 ){
-    alert("Your answer is incorrect you have few more chances");
+} else if (parseInt(numOfKids) > 1 ){
+    alert("Your answer is too high,  you have few more chances");
     totalAttempts++;
 } else {
-    alert("Your answer is incorrect you have few more chances");
+    alert("Your answer is too low, you have few more chances");
     totalAttempts++;
 }
 }  
@@ -102,31 +102,41 @@ document.getElementById('country').innerHTML = country;
 
 
 //Question 6 Favorites fruits question
+
+alert("Please enter 3 fruits you like");
 var fruits = [];
 
-for (i=0;i<3;i++) {
+for (i=1;i<4;i++) {
+//alert('Enter the fruit '+j+' you like');
 fruits[i] = fruitsInput();
 }
 
 function fruitsInput(){
-   fruit= prompt("Enter the fruit you like");
-   alert(fruit);
+   fruit= prompt("Enter the fruit "+ i +" you like");
+   console.log(fruit);
    return fruit;
 }
 
-for (i=0;i<fruits.length;i++) {
+for (i=1;i<fruits.length;i++) {
     alert(fruits[i]);
     console.log(fruits[i]);
 }
 
 //Question 7 Favorites Languages question
 
-var programmingLang = ['C','C++','Java','C#'];
-var j=0;
-alert(programmingLang.length);
+var programmingLang = [];
+var j=1;
+var length = 4;
 
-while (j < programmingLang.length) 
+while (j < length) 
 {
-    alert(programmingLang[j]);
+    programmingLang[j]= langInput();
+   // alert(programmingLang[j]);
     j++;
+}
+
+function langInput() {
+    language = prompt('Enter the programming language '+j+' you like');
+    console.log('language:'+language);
+    return language;
 }
